@@ -1,4 +1,4 @@
-import { ADD_TO_DO, REMOVE_TO_DO, EDIT_TO_DO } from "./actionTypes";
+import { ADD_TO_DO, REMOVE_TO_DO, EDIT_TO_DO, EDIT_STATE } from "./actionTypes";
 
 export const addToDo = (value) => ({
     type: ADD_TO_DO,
@@ -10,7 +10,12 @@ export const removeToDo = (value) => ({
         payload: value
 })
 
-export const editToDo = (value) => ({
+export const editToDo = (value, id) => ({
     type:  EDIT_TO_DO,
-    payload: value
+    payload: {value, id}
+})
+
+export const editState = ( id) => ({
+    type:  EDIT_STATE,
+    payload: { id}
 })

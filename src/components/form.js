@@ -5,6 +5,8 @@ import Modal from 'react-modal';
 import {useEffect, useState} from 'react'
 import {connect} from "react-redux";
 import {addToDo} from '../redux/actions'
+import {withRouter} from 'react-router-dom'
+
 
 
 const customStyles = {
@@ -109,5 +111,5 @@ const mapActionsToProps = {
 export default connect(
     mapStateToProps,
     mapActionsToProps
-)(FormCustom)
+)(withRouter(FormCustom))
 
