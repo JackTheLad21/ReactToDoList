@@ -54,10 +54,18 @@ const FormCustom = (props) => {
       setIsOpen(false);
     }
 
+    function goToList(){
+      props.history.push('/list')
+    }
+
     return (
 
         <div>
-        <button onClick={openModal}>Crea Nuovo Task</button>
+          <div className="button-opt">
+            <Button onClick={openModal}>Crea Nuovo Task</Button>
+            <Button variant="warning" onClick={goToList}>Lista Task</Button>
+          </div>
+
         <Modal
           isOpen={modalIsOpen}
           onAfterOpen={afterOpenModal}

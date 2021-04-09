@@ -32,11 +32,11 @@ export default function(state = initialState, action) {
                 })           
             }
 
-        case EDIT_STATE:
-            return {
-                ...state,
-                toDoList: state.toDoList.map(curr.progress)
-            }
+        // case EDIT_STATE:
+        //     return {
+        //         ...state,
+        //         toDoList: state.toDoList.map(curr)
+        //     }
 
                 
         default: 
